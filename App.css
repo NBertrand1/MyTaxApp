@@ -1,42 +1,29 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+#root{min-height:100vh}
+.tax-app{min-height:100vh;background:#f7f8fa;color:#152333}
+.tax-hero{padding:88px 0 94px;background:linear-gradient(125deg,#f7f8fa 55%,#e9f1f4)}
+.prototype-chip{background:#e3f1ed!important;color:#176b5b!important;font-weight:700!important;letter-spacing:1px!important;margin-bottom:22px!important}
+.tax-title{max-width:720px;font-size:clamp(2.8rem,5.5vw,4.8rem)!important;line-height:1.08!important;font-weight:800!important;letter-spacing:-.05em!important;color:#142c3b}
+.tax-title span{color:#167c72}
+.tax-intro{max-width:620px;margin-top:22px!important;color:#5b6a75;font-size:1.05rem!important;line-height:1.8!important}
+.tax-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.tax-actions .MuiButton-contained{background:#176f68;text-transform:none;padding:11px 20px}
+.tax-actions .MuiButton-outlined{border-color:#b9c8cc;color:#29434d;text-transform:none;padding:11px 20px}
+.tax-preview{border:1px solid #dce5e8!important;border-radius:16px!important;background:#fff!important;box-shadow:0 22px 55px rgba(31,61,71,.08)!important}
+.preview-label,.section-kicker{font-size:.7rem!important;letter-spacing:1.8px!important;font-weight:800!important;color:#167c72!important}
+.tax-preview h5{font-weight:800;margin:10px 0 24px}
+.preview-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;border-top:1px solid #edf0f2;color:#5c6b75;font-size:.88rem}
+.preview-row strong{color:#172f3a}.preview-row .MuiChip-root{background:#edf4f2;color:#247267}
+.preview-footnote{font-size:.72rem!important;color:#8a969c;margin-top:14px!important}
+.tax-section{padding-top:80px;padding-bottom:88px}
+.section-title{font-size:clamp(2rem,4vw,3rem)!important;font-weight:800!important;letter-spacing:-.04em!important;margin-top:12px!important;color:#172f3a}
+.section-description{max-width:720px;color:#687780;line-height:1.8!important;margin-top:14px!important}
+.feature-grid{margin-top:30px!important}
+.feature-card{height:100%;border:1px solid #e0e7e9!important;border-radius:12px!important;background:#fff!important;transition:transform .2s,box-shadow .2s}
+.feature-card:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(31,61,71,.07)}
+.feature-number{display:inline-block;color:#167c72;font-size:.75rem;font-weight:800;letter-spacing:1px;margin-bottom:18px}
+.feature-card h6{font-weight:800;color:#203945;margin-bottom:10px}
+.feature-card p{font-size:.9rem;line-height:1.75;color:#71808a}
+.about-band{padding:75px 0;background:#eaf1f2}
+.tax-footer{padding:26px 0;background:#142c3b;color:#d7e2e5}
+.tax-footer p{font-size:.78rem;letter-spacing:.5px}
+@media(max-width:600px){.tax-hero{padding:60px 0}.tax-section{padding-top:60px;padding-bottom:60px}.about-band{padding:58px 0}.tax-title{font-size:2.7rem!important}}

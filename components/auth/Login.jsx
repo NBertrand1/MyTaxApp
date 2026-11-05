@@ -1,42 +1,34 @@
-import React, { useState } from 'react';
+import { useState } from 'react'
 
 function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [message, setMessage] = useState('')
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Ici, vous ajouteriez la logique pour envoyer les données de connexion à votre serveur
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
+  const handleSubmit = event => {
+    event.preventDefault()
+    if (!event.currentTarget.reportValidity()) return
+    setMessage('Interface de démonstration : aucun serveur d’authentification n’est connecté.')
+    setPassword('')
+  }
 
   return (
-    <div>
-      <h2>Connexion</h2>
+    <section aria-labelledby="login-title">
+      <h2 id="login-title">Connexion</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <label htmlFor="login-email">Adresse e-mail :</label>
+          <input id="login-email" type="email" autoComplete="email" value={email} onChange={event => setEmail(event.target.value)} required />
         </div>
         <div>
-          <label htmlFor="password">Mot de passe:</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+          <label htmlFor="login-password">Mot de passe :</label>
+          <input id="login-password" type="password" autoComplete="current-password" value={password} onChange={event => setPassword(event.target.value)} required />
         </div>
         <button type="submit">Se connecter</button>
       </form>
-    </div>
-  );
+      <p role="status" aria-live="polite">{message}</p>
+    </section>
+  )
 }
 
-export default Login;
+export default Login
